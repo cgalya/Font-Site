@@ -1,0 +1,143 @@
+body {
+	background: #3c0561;
+}
+
+#one {
+	font-family: Akronim;
+}
+
+#two {
+	font-family: Advent Pro;
+}
+
+#three {
+	font-family: Aladin;
+}
+
+#first {
+	margin-top: 70px;
+	text-align: center;
+}
+
+.fontBox {
+	font-size: 50px;
+	text-align: center;
+	width: auto;
+	float: none;
+	display: inline-block;
+}
+
+.thumbnail {
+	padding: 30px;
+	background: #f8f7f7;
+
+}
+
+.selected .thumbnail {
+	background: #b1aeae;
+}
+
+.fontBox p {
+	font-size: 15px;
+	font-family: Arial;
+	padding-top: 30px;
+	color: #ddd;
+}
+
+.fontBox:hover p {
+	color: #111;
+}
+
+input {
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	line-height: 30px;
+	width: 400px;
+	font: Arial;
+	border: none;
+}
+
+button {
+	border: none;
+	background: #fff;
+	padding: 0px;
+}
+
+#input {
+	padding-right: 110px;
+}
+
+#lowercase {
+	margin-left: -90px;
+}
+
+#input {
+	transition: box-shadow 0.5s;
+}
+
+#input:hover {
+	box-shadow: 5px 12px 15px -5px rgba(166,164,166,1);
+}
+
+.modal {
+	background-color: #3c0561;
+	padding: 50px;
+}
+
+.modal input {
+	font-size: 50px;
+	position: relative;
+	top: 120px;
+	width: 600px;
+	line-height: 80px;
+}
+
+#title {
+	color: #eee;
+}
+
+#modalTitle {
+	font-size: 80px;
+}
+
+#select, #return {
+	position: fixed;
+	right: 30px;
+	color: #777;
+	background: #ddd;
+	border: 3px solid #777;
+	border-radius: 15px;
+	font-size: 15px;
+	padding: 5px;
+	z-index: 1;
+	margin-top: 30px;
+}
+
+#return {
+	right: 40px;
+	color: #ddd;
+	background: none;
+	border: 3px solid #ddd;
+}
+
+@media only screen and (max-width: 992px) {
+	#select, #return {
+		margin-top: 100px;
+	}
+	.navbar-default {
+		padding-left: 50px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	#select, #return {
+		margin-top: 130px;
+	}
+}
+
+@media only screen and (max-width: 465px) {
+	.navbar-default {
+		padding-left: 20px;
+	}
+}
