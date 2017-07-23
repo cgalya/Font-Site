@@ -65,3 +65,28 @@ $("#return").click(function() {
 	$("#return").hide();
 })
 }
+
+$("#colorOne").spectrum({
+    color: "#f00",
+    change: function(color) {
+    	var colorHex = color.toHexString();
+    	var text = $(".thumbnail");
+    	text.css("color", colorHex);
+    }
+});
+
+$("#colorTwo").spectrum({
+    color: "#f00",
+    change: function(color) {
+    	var colorHex = color.toHexString();
+    	var text = $(".thumbnail");
+    	text.css("background", colorHex);
+    }
+});
+
+$("#resetColor").click(function() {
+	var text = $(".thumbnail");
+	text.css("background", "#f8f7f7");
+	text.css("color", "#000");
+});
+

@@ -1,5 +1,6 @@
 body {
 	background: #3c0561;
+	padding-top: 30px;
 }
 
 #one {
@@ -15,7 +16,6 @@ body {
 }
 
 #first {
-	margin-top: 70px;
 	text-align: center;
 }
 
@@ -30,11 +30,10 @@ body {
 .thumbnail {
 	padding: 30px;
 	background: #f8f7f7;
-
 }
 
 .selected .thumbnail {
-	background: #b1aeae;
+	border: 3px solid yellow;
 }
 
 .fontBox p {
@@ -88,20 +87,22 @@ button {
 .modal input {
 	font-size: 50px;
 	position: relative;
-	top: 120px;
+	top: 200px;
 	width: 600px;
-	line-height: 80px;
+
 }
 
 #title {
 	color: #eee;
+	position: relative;
+	top: 150px;
 }
 
 #modalTitle {
-	font-size: 80px;
+	font-size: 100px;
 }
 
-#select, #return {
+#select, #return, .openWithLink, #resetColor {
 	position: fixed;
 	right: 30px;
 	color: #777;
@@ -120,6 +121,18 @@ button {
 	background: none;
 	border: 3px solid #ddd;
 }
+
+.openWithLink {
+	left: 10px;
+}
+ #colorTwo {
+ 	top: 150px;
+ }
+
+ #resetColor {
+ 	top: 210px;
+ 	left: 10px;
+ }
 
 @media only screen and (max-width: 992px) {
 	#select, #return {
