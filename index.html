@@ -27,12 +27,36 @@
   </nav>
 	
 	<div class="container main">
-		<button class='openWithLink' id="colorOne" value="">Choose Font Color</button>
-		<button class='openWithLink' id="colorTwo">Choose Background Color</button>
-		<button id="resetColor">Reset Color</button>
-		<button id="select">View Selected Fonts</button>
-		<button id="return">Return</button>
-		<div id="first" class="row">
+		<div class="hover">
+			<div class='openWithLink' id="colorOne" value=""><span class="glyphicon glyphicon-text-color" aria-hidden="true"></div>
+			<span class="hoverText" id="hoverColorOne">Change Text Color</span>
+		</div>
+		<div class="hover">
+			<div class='openWithLink' id="colorTwo"><span class="glyphicon glyphicon-text-background" aria-hidden="true"></div>
+			<span class="hoverText" id="hoverColorTwo">Change Background Color</span>
+		</div>
+		<div class="hover">
+			<div id="plus"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></div>
+			<span class="hoverText" id="hoverFontPlus">Increase Font Size</span>
+		</div>
+		<div class="hover">
+			<div id="minus"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></div>
+			<span class="hoverText" id="hoverFontMinus">Decrease Font Size</span>
+		</div>
+		<div class="hover">
+			<div id="resetColor"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></div>
+			<span class="hoverText" id="hoverReset">Reset</span>
+		</div>
+		<div class="hover">
+			<button id="select"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></button>
+			<span class="hoverText" id="hoverSelect">View Selected Fonts</span>		
+		</div>
+		<div class="hover">
+			<button id="return"><span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span></button>
+			<span class="hoverText" id="hoverReturn">Return</span>
+		</div>
+
+		<div id="first" class="row lazy">
     </div>
     <div id="myModal" class="modal">
 			<div id="title">
@@ -50,9 +74,10 @@
     </div>
   </footer>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="assets/spectrum.js"></script>
-	<script src="assets/jquery.lazyload.js"></script>
-	<script src="assets/javascript.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/spectrum.js"></script>
+	<script type="text/javascript" src="assets/jquery.lazyload.js"></script>
+
+	<script type="text/javascript" src="assets/javascript.js"></script>
 </body>
 </html>

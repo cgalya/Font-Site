@@ -24,33 +24,10 @@ $.ajax({
 		$("head").prepend("<style type = text/css>" + "@font-face {" + "font-family:" + fontFamily + ";" + "src: url(" + fontLink + ");}" + "</style>");
 		$("<div class='col-lg-3 col-md-4 col-xs-6 fontBox'> <div class='thumbnail'><h2>font</h2><p>" + fontFamily + "</p></div></div>").appendTo($("#first")).css("font-family", fontFamily);
 		}
-	fontClicks();
-});
-
-	var x = 40;
-	var y = 1;
-
-	$(window).scroll(function() {
-    if($(window).scrollTop() == $(document).height() - $(window).height()) {
-    	x += 40;
-    	y += 40;
-      $.ajax({
-	url: "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDe2mtTrzmBtUsVpmDTImfKCwR-bSnV2Bc",
-	method: "GET"
-	}).done(function(response) {
-		for (var i = y; i <= x; i++) {
-		var fontLink = response.items[i].files.regular
-		var fontFamily = response.items[i].family
-		$("head").prepend("<style type = text/css>" + "@font-face {" + "font-family:" + fontFamily + ";" + "src: url(" + fontLink + ");}" + "</style>");
-		$("<div class='col-lg-3 col-md-4 col-xs-6 fontBox'> <div class='thumbnail'><h2>font</h2><p>" + fontFamily + "</p></div></div>").appendTo($("#first")).css("font-family", fontFamily);
-		}
-	fontClicks();
-});
-    }
 });
 
 
-function fontClicks() {
+
 
 $("#lowercase").click(function() {
 	var text = $(".thumbnail");
@@ -86,6 +63,4 @@ $("#return").click(function() {
 	$("#select").show();
 	$("#return").hide();
 })
-}
 
-fontClicks();

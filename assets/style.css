@@ -1,6 +1,7 @@
 body {
 	background: #3c0561;
 	padding-top: 30px;
+	font-family: Cabin;
 }
 
 #one {
@@ -20,7 +21,6 @@ body {
 }
 
 .fontBox {
-	font-size: 50px;
 	text-align: center;
 	width: auto;
 	float: none;
@@ -28,17 +28,22 @@ body {
 }
 
 .thumbnail {
+	
 	padding: 30px;
 	background: #f8f7f7;
 }
 
+.fontBox .thumbnail h2 {
+	font-size: 50px;
+}
+
 .selected .thumbnail {
-	border: 3px solid yellow;
+	border: 3px solid #f0bb35;
 }
 
 .fontBox p {
 	font-size: 15px;
-	font-family: Arial;
+	font-family: Cabin;
 	padding-top: 30px;
 	color: #ddd;
 }
@@ -53,7 +58,7 @@ input {
 	margin-bottom: 20px;
 	line-height: 30px;
 	width: 400px;
-	font: Arial;
+	font: Cabin;
 	border: none;
 }
 
@@ -87,56 +92,132 @@ button {
 .modal input {
 	font-size: 50px;
 	position: relative;
-	top: 200px;
+	top: 170px;
 	width: 600px;
-
 }
 
 #title {
 	color: #eee;
 	position: relative;
-	top: 150px;
+	top: 100px;
 }
 
 #modalTitle {
 	font-size: 100px;
 }
 
-#select, #return, .openWithLink, #resetColor {
+#title h3 {
+	color: #f132ea;
+}
+
+#select, #return, .openWithLink, #resetColor, #plus, #minus {
 	position: fixed;
-	right: 30px;
-	color: #777;
-	background: #ddd;
-	border: 3px solid #777;
+	color: #f132ea;
+	background: #000;
+	border: 3px solid #f132ea;
 	border-radius: 15px;
 	font-size: 15px;
 	padding: 5px;
 	z-index: 1;
-	margin-top: 30px;
+	font-size: 17px;
 }
 
-#return {
-	right: 40px;
-	color: #ddd;
-	background: none;
-	border: 3px solid #ddd;
+#select, #return, .openWithLink, #resetColor, #plus, #minus {
+	border-radius: 50%;
+	padding-left: 8px;
+	width: 40px;
+	padding-bottom: 3px;
 }
 
-.openWithLink {
-	left: 10px;
+#colorOne {
+	left: 40px;
+	padding-left: 9px;
 }
+
  #colorTwo {
- 	top: 150px;
+  left: 40px;
+  top: 135px;
  }
 
  #resetColor {
- 	top: 210px;
- 	left: 10px;
+ 	left: 40px;
+ 	top: 270px;
+ }
+
+ #plus {
+ 	left: 40px;
+ 	top: 180px;
+	padding-left: 9px;
+ }
+
+ #minus {
+	left: 40px;
+	top: 225px;
+ }
+
+ #select, #return {
+ 	padding-left: 5px;
+ 	right: 40px;
+ 	top: 90px;
+ }
+
+ .hoverText {
+	display: none;
+	color: #f132ea;
+	background: #000;
+	width: auto;
+	padding-right: 3px;
+	padding-left: 3px;
+	z-index: 1;
+	position: fixed;
+	left: 87px;
+}
+
+.hover:hover .hoverText {
+	display: block;
+}
+
+#hoverColorOne {
+	top: 98px;
+}
+
+#hoverColorTwo {
+	top: 143px;
+}
+
+#hoverFontPlus {
+	top: 189px;
+}
+
+#hoverFontMinus {
+	top: 234px;
+}
+
+#hoverReset {
+	top: 281px;
+}
+
+#hoverSelect {
+	top: 100px;
+	left: 1127px;
+}
+
+#selectHoverDiv:hover {
+	background: yellow;
+}
+
+#hoverReturn {
+	top: 100px;
+	left: 1205px;
+}
+
+ button, input {
+ 	outline: none;
  }
 
 @media only screen and (max-width: 992px) {
-	#select, #return {
-		margin-top: 100px;
+	#select, #return, .openWithLink, #resetColor, #plus, #minus {
+		margin-top: 80px;
 	}
 	.navbar-default {
 		padding-left: 50px;
@@ -146,9 +227,12 @@ button {
 	}
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
+	#colorOne, #colorTwo, #resetColor, #plus, #minus {
+		left: 5px;
+	}
 	#select, #return {
-		margin-top: 130px;
+		right: 5px;
 	}
 	#first {
 		margin-top: 120px;
@@ -158,5 +242,11 @@ button {
 @media only screen and (max-width: 465px) {
 	.navbar-default {
 		padding-left: 20px;
+	}
+	#first {
+		margin-top: 140px;
+	}
+	#select, #return, .openWithLink, #resetColor, #plus, #minus {
+		margin-top: 100px;
 	}
 }
