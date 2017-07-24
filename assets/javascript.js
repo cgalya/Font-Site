@@ -1,13 +1,16 @@
-
+window.onload = function() { 
 var modal = $("#myModal");
 var input = $("#input");
 var fontSize = 50;
 
 
 
+
+
 modal.css("display", "block");
 $("#return").hide();
 $("input").focus();
+
 
 $("input").keyup(function(){  
    if (event.keyCode == 13) {
@@ -53,35 +56,46 @@ $(".fontBox").click(function() {
 $("#select").click(function() {
 	$(".fontBox").fadeOut();
 	$(".selected").fadeIn();
-	$("#return").show();
+	$("#return").fadeIn();
 	$(".selected").removeClass("selected");
-	$("#select").hide();
+	$("#select").fadeOut();
 });
 
 $("#return").click(function() {	
 	$(".fontBox").fadeIn();
-	$("#return").hide();
-	$("#select").show();
+	$("#return").fadeOut();
+	$("#select").fadeIn();
 });
 
 
 $("#colorOne").spectrum({
     color: "#f00",
+    showAlpha: true,
+    showPalette: true,
+    showSelectionPalette: true,
+    palette: [],
     change: function(color) {
     	var colorHex = color.toHexString();
     	var text = $(".thumbnail");
     	text.css("color", colorHex);
     }
+
 });
 
 $("#colorTwo").spectrum({
     color: "#f00",
+    showAlpha: true,
+    showPalette: true,
+    showSelectionPalette: true,
+    palette: [],
     change: function(color) {
     	var colorHex = color.toHexString();
     	var text = $(".thumbnail");
     	text.css("background", colorHex);
     }
 });
+
+
 
 $("#resetColor").click(function() {
 	var text = $(".thumbnail");
@@ -106,3 +120,6 @@ $("#minus").click(function() {
 	fontSize -= 10;
 	text.css("font-size", fontSize + "px");
 });
+
+
+}

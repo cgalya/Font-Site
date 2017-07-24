@@ -1,7 +1,11 @@
 body {
-	background: #3c0561;
+	background: #222;
 	padding-top: 30px;
 	font-family: Cabin;
+}
+
+.navbar {
+	background: #fff;
 }
 
 #one {
@@ -71,22 +75,24 @@ button {
 
 #input {
 	padding-right: 110px;
+	background: #12cff3;
+	transition: box-shadow 0.5s;
 }
 
 #lowercase {
 	margin-left: -90px;
 }
 
-#input {
-	transition: box-shadow 0.5s;
+#lowercase, #mixedcase, #uppercase {
+	background: #12cff3;
 }
 
 #input:hover {
-	box-shadow: 5px 12px 15px -5px rgba(166,164,166,1);
+	box-shadow: 5px 12px 0px #fd9107;
 }
 
 .modal {
-	background-color: #3c0561;
+	background-color: #fff;
 	padding: 50px;
 }
 
@@ -96,12 +102,21 @@ button {
 	top: 170px;
 	width: 600px;
 	font-size: 50px;
+	background: #12cff3;
+	transition: box-shadow 0.5s;
+	
 }
 
+#inputTwo::placeholder {
+	color: #000;
+}
 
+#inputTwo:hover {
+	box-shadow: 5px 12px 0px #fd9107;
+}
 
 #title {
-	color: #eee;
+	color: #000;
 	position: relative;
 	top: 100px;
 }
@@ -111,14 +126,14 @@ button {
 }
 
 #title h3 {
-	color: #f132ea;
+	color: #ab24f7;
 }
 
 #select, #return, .openWithLink, #resetColor, #plus, #minus {
 	position: fixed;
-	color: #f132ea;
-	background: #000;
-	border: 3px solid #f132ea;
+	color: #ab24f7;
+	background: #111;
+	border: 3px solid #ab24f7;
 	border-radius: 15px;
 	padding: 5px;
 	z-index: 1;
@@ -130,6 +145,7 @@ button {
 	padding-left: 8px;
 	width: 40px;
 	padding-bottom: 3px;
+	transition: box-shadow 0.5s, left 0.5s;
 }
 
 #colorOne {
@@ -158,10 +174,41 @@ button {
 	top: 225px;
  }
 
+ #colorOne:hover {
+ 	left: 45px;
+ 	box-shadow: -7px 0px 0px #f3f310;
+ }
+
+ #colorTwo:hover {
+ 	left: 45px;
+ 	box-shadow: -7px 0px 0px #fd9107;
+ }
+
+#resetColor:hover {
+ 	left: 45px;
+ 	box-shadow: -7px 0px 0px #07fa37;
+ }
+
+ #plus:hover {
+ 	left: 45px;
+ 	box-shadow: -7px 0px 0px #12cff3;
+ }
+
+ #minus:hover {
+ 	left: 45px;
+ 	box-shadow: -7px 0px 0px #fc037b;
+ }
+
  #select, #return {
  	padding-left: 5px;
  	right: 20px;
  	top: 90px;
+ 	transition: box-shadow 0.5s, right 0.5s;
+ }
+
+ #select:hover, #return:hover {
+ 	right: 15px;
+ 	box-shadow: -10px 5px 0px #12cff3;
  }
 
  button, input {
@@ -195,7 +242,7 @@ button {
 	}
 }
 
-@media only screen and (max-width: 504px) {
+@media only screen and (max-width: 620px) {
 	.navbar-default {
 		padding-left: 20px;
 	}
@@ -220,7 +267,7 @@ button {
 		padding-top: 0px;
 		padding-left: 10px;
 	}
-
+}
 
 @media only screen and (max-width: 360px) {
 	#first {
@@ -236,5 +283,6 @@ button {
 		top: 0px;
 		width: 300px;
 	}
-
 }
+
+
