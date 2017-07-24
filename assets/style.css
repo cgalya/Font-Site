@@ -18,6 +18,7 @@ body {
 
 #first {
 	text-align: center;
+	margin-top: 30px;
 }
 
 .fontBox {
@@ -89,12 +90,15 @@ button {
 	padding: 50px;
 }
 
-.modal input {
+#inputTwo {
 	font-size: 50px;
 	position: relative;
 	top: 170px;
 	width: 600px;
+	font-size: 50px;
 }
+
+
 
 #title {
 	color: #eee;
@@ -116,13 +120,12 @@ button {
 	background: #000;
 	border: 3px solid #f132ea;
 	border-radius: 15px;
-	font-size: 15px;
 	padding: 5px;
 	z-index: 1;
 	font-size: 17px;
 }
 
-#select, #return, .openWithLink, #resetColor, #plus, #minus {
+.openWithLink, #resetColor, #plus, #minus {
 	border-radius: 50%;
 	padding-left: 8px;
 	width: 40px;
@@ -157,59 +160,9 @@ button {
 
  #select, #return {
  	padding-left: 5px;
- 	right: 40px;
+ 	right: 20px;
  	top: 90px;
  }
-
- .hoverText {
-	display: none;
-	color: #f132ea;
-	background: #000;
-	width: auto;
-	padding-right: 3px;
-	padding-left: 3px;
-	z-index: 1;
-	position: fixed;
-	left: 87px;
-}
-
-.hover:hover .hoverText {
-	display: block;
-}
-
-#hoverColorOne {
-	top: 98px;
-}
-
-#hoverColorTwo {
-	top: 143px;
-}
-
-#hoverFontPlus {
-	top: 189px;
-}
-
-#hoverFontMinus {
-	top: 234px;
-}
-
-#hoverReset {
-	top: 281px;
-}
-
-#hoverSelect {
-	top: 100px;
-	left: 1127px;
-}
-
-#selectHoverDiv:hover {
-	background: yellow;
-}
-
-#hoverReturn {
-	top: 100px;
-	left: 1205px;
-}
 
  button, input {
  	outline: none;
@@ -237,9 +190,12 @@ button {
 	#first {
 		margin-top: 120px;
 	}
+	.navbar-default {
+		padding-right: 50px;
+	}
 }
 
-@media only screen and (max-width: 465px) {
+@media only screen and (max-width: 504px) {
 	.navbar-default {
 		padding-left: 20px;
 	}
@@ -249,4 +205,36 @@ button {
 	#select, #return, .openWithLink, #resetColor, #plus, #minus {
 		margin-top: 100px;
 	}
+	#input {
+		width: 300px;
+	}
+	#title {
+		top: 0px;
+	}
+	#inputTwo {
+		top: 40px;
+		width: 300px;
+		font-size: 30px;
+	}
+		#myModal {
+		padding-top: 0px;
+		padding-left: 10px;
+	}
+
+
+@media only screen and (max-width: 360px) {
+	#first {
+		margin-top: 160px;
+	}
+	#select, #return, .openWithLink, #resetColor, #plus, #minus {
+		margin-top: 140px;
+	}
+	#input {
+		width: 245px;
+	}
+	#inputTwo {
+		top: 0px;
+		width: 300px;
+	}
+
 }
