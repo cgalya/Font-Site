@@ -9,7 +9,7 @@ var fontSize = 50;
 
 modal.css("display", "block");
 $("#return").hide();
-$("input").focus();
+
 
 
 $("input").keyup(function(){  

@@ -30,6 +30,7 @@ body {
 	width: auto;
 	float: none;
 	display: inline-block;
+	min-width: 180px;
 }
 
 .thumbnail {
@@ -79,6 +80,10 @@ button {
 	transition: box-shadow 0.5s;
 }
 
+#input:focus, #input:hover {
+	box-shadow: 5px 12px 0px #fd9107;
+}
+
 #lowercase {
 	margin-left: -90px;
 }
@@ -87,12 +92,12 @@ button {
 	background: #12cff3;
 }
 
-#input:hover {
-	box-shadow: 5px 12px 0px #fd9107;
+#myModal {
+	text-align: center;
 }
 
 .modal {
-	background-color: #fff;
+	background-color: #222;
 	padding: 50px;
 }
 
@@ -103,20 +108,18 @@ button {
 	width: 600px;
 	font-size: 50px;
 	background: #12cff3;
-	transition: box-shadow 0.5s;
-	
 }
 
 #inputTwo::placeholder {
 	color: #000;
 }
 
-#inputTwo:hover {
+#inputTwo:focus, #inputTwo:hover {
 	box-shadow: 5px 12px 0px #fd9107;
 }
 
 #title {
-	color: #000;
+	color: #fff;
 	position: relative;
 	top: 100px;
 }
@@ -126,14 +129,20 @@ button {
 }
 
 #title h3 {
-	color: #ab24f7;
+	color: #ab40f1;
+}
+
+#modalInstructions {
+	color: #fff;
+	position: relative;
+	top: 150px;
 }
 
 #select, #return, .openWithLink, #resetColor, #plus, #minus {
 	position: fixed;
-	color: #ab24f7;
-	background: #111;
-	border: 3px solid #ab24f7;
+	color: #ab40f1;
+	background: #222;
+	border: 3px solid #ab40f1;
 	border-radius: 15px;
 	padding: 5px;
 	z-index: 1;
@@ -263,9 +272,12 @@ button {
 		width: 300px;
 		font-size: 30px;
 	}
-		#myModal {
+	#myModal {
 		padding-top: 0px;
 		padding-left: 10px;
+	}
+	#modalInstructions {
+		top: 25px;
 	}
 }
 
@@ -282,6 +294,9 @@ button {
 	#inputTwo {
 		top: 0px;
 		width: 300px;
+	}
+	#modalInstructions {
+		top: 0px;
 	}
 }
 
