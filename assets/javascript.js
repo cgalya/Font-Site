@@ -4,9 +4,6 @@ var input = $("#input");
 var fontSize = 50;
 
 
-
-
-
 modal.css("display", "block");
 $("#return").hide();
 
