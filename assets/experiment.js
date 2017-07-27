@@ -5,6 +5,7 @@ var fontSize = 50;
 
 
 
+
 modal.css("display", "block");
 $("#return").hide();
 $("input").focus();
@@ -13,14 +14,18 @@ $("input").keyup(function(){
    if (event.keyCode == 13) {
    	 $("h2").html(this.value);
    	 modal.slideUp("fast");
+   	 $("#input").val($(this).val());
    }
 });
 
+$("#date").click(function() {
+	console.log(this.value);
+	request(this.value);
+});
 
-
-
+function request(sortWord) {
 $.ajax({
-	url: "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDe2mtTrzmBtUsVpmDTImfKCwR-bSnV2Bc",
+	url: "https://www.googleapis.com/webfonts/v1/webfonts?sort=" + sortWord + "&key=AIzaSyDe2mtTrzmBtUsVpmDTImfKCwR-bSnV2Bc",
 	method: "GET"
 	}).done(function(response) {
 		for (var i = 0; i < response.items.length; i++) {
@@ -31,7 +36,9 @@ $.ajax({
 		}
 	fontClicks();
 });
+}
 
+request("alpha");
 
 function fontClicks() {
 

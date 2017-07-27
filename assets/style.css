@@ -20,10 +20,20 @@ body {
 	font-family: 'Aladin', cursive;
 }
 
+.btn-group {
+	margin-top: 20px;
+	margin-left: 150px;
+}
+
+#sort {
+	background: #222;
+	color: #fff;
+	padding: 10px;
+}
+
 #first {
 	text-align: center;
 	margin-top: 30px;
-	min-height: 1500px;
 }
 
 .fontBox {
@@ -61,7 +71,7 @@ body {
 
 input {
 	font-size: 20px;
-	margin-top: 20px;
+	margin-top: 25px;
 	margin-bottom: 20px;
 	line-height: 30px;
 	width: 400px;

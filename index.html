@@ -17,14 +17,25 @@
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-      <h1 id="navTitle"><span id="one">FONTS</span><span id="two"> FONTS </span><span id="three">FONTS</span></h1>
+	      <h1 id="navTitle"><span id="one">FONTS</span><span id="two"> FONTS </span><span id="three">FONTS</span></h1>
       </div>
+      <div class="btn-group">
+			  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="sort">
+			    Sort Fonts <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu">
+			    <li><a href="#" value="alpha">Alphabetically</a></li>
+			    <li><a href="#" id="date" value="date">Most Recent</a></li>
+			    <li><a href="#" value="popularity">Popularity</a></li>
+			    <li><a href="#" value="style">Number of Styles per Family</a></li>
+			    <li><a href="#" value="trending">Trending</a></li>
+			  </ul>
+			</div>
       <div class="nav navbar-nav navbar-right">
-      <input id="input" type="text" value="">
-     	<button id="lowercase">aa</button> /
-     	<button id="mixedcase">Aa</button> /
-     	<button id="uppercase">AA</button>
-      	
+	      <input id="input" type="text" value="">
+	     	<button id="lowercase">aa</button> /
+	     	<button id="mixedcase">Aa</button> /
+	     	<button id="uppercase">AA</button>      	
       </div>
       
     </div>
@@ -67,6 +78,7 @@
   </footer>
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="assets/spectrum.js"></script>
 	<script type="text/javascript" src="assets/experiment.js"></script>
 </body>
