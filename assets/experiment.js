@@ -1,4 +1,4 @@
-
+$(document).ready(function() {
 var modal = $("#myModal");
 var input = $("#input");
 var fontSize = 50;
@@ -15,6 +15,9 @@ $("input").keyup(function(){
    	 modal.slideUp("fast");
    }
 });
+
+
+
 
 $.ajax({
 	url: "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDe2mtTrzmBtUsVpmDTImfKCwR-bSnV2Bc",
@@ -108,4 +111,6 @@ $("#minus").click(function() {
 	var textP = $(".fontBox p");
 	fontSize -= 10;
 	text.css("font-size", fontSize + "px");
+});
+
 });
