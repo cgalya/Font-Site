@@ -18,9 +18,10 @@ $("input").keyup(function(){
    }
 });
 
-$("#date").click(function() {
-	console.log(this.value);
-	request(this.value);
+request("alpha");
+
+$(".dropdown-menu a").click(function() {
+	request(this.dataset.value);
 });
 
 function request(sortWord) {
@@ -28,6 +29,7 @@ $.ajax({
 	url: "https://www.googleapis.com/webfonts/v1/webfonts?sort=" + sortWord + "&key=AIzaSyDe2mtTrzmBtUsVpmDTImfKCwR-bSnV2Bc",
 	method: "GET"
 	}).done(function(response) {
+		$("#first").empty();
 		for (var i = 0; i < response.items.length; i++) {
 		var fontLink = response.items[i].files.regular
 		var fontFamily = response.items[i].family
@@ -38,7 +40,7 @@ $.ajax({
 });
 }
 
-request("alpha");
+
 
 function fontClicks() {
 

@@ -4,8 +4,15 @@ body {
 	font-family: 'Cabin', sans-serif;
 }
 
+/*navbar styling*/
+
 .navbar {
 	background: #fff;
+}
+
+.navbar-brand {
+	color: #000 !important;
+	font-size: 30px;
 }
 
 #one {
@@ -20,22 +27,41 @@ body {
 	font-family: 'Aladin', cursive;
 }
 
-.btn-group {
-	margin-top: 20px;
-	margin-left: 150px;
+input {
+	font-size: 20px;
+
+	border: none;
+	padding-left: 10px;
 }
 
-#sort {
-	background: #222;
-	color: #fff;
-	padding: 10px;
+#input {
+	background: #12cff3;
 }
+
+#input:focus, #input:hover {
+	border: 3px solid #fd9107;
+}
+
+.caseBtns, #sort {
+	border-left: 1px solid #ddd;
+}
+
+#uppercase {
+	border-right: 1px solid #ddd;
+}
+
+#navSubmit {
+	margin-right: 5px;
+}
+
+
+/*main row styling*/
 
 #first {
 	text-align: center;
-	margin-top: 30px;
 }
 
+/*font tiles*/
 .fontBox {
 	text-align: center;
 	width: auto;
@@ -69,39 +95,7 @@ body {
 	color: #111;
 }
 
-input {
-	font-size: 20px;
-	margin-top: 25px;
-	margin-bottom: 20px;
-	line-height: 30px;
-	width: 400px;
-	font: Cabin;
-	border: none;
-}
-
-button {
-	border: none;
-	background: #fff;
-	padding: 0px;
-}
-
-#input {
-	padding-right: 110px;
-	background: #12cff3;
-	transition: box-shadow 0.5s;
-}
-
-#input:focus, #input:hover {
-	box-shadow: 5px 12px 0px #fd9107;
-}
-
-#lowercase {
-	margin-left: -90px;
-}
-
-#lowercase, #mixedcase, #uppercase {
-	background: #12cff3;
-}
+/*modal screen*/
 
 #myModal {
 	text-align: center;
@@ -115,10 +109,10 @@ button {
 #inputTwo {
 	font-size: 50px;
 	position: relative;
-	top: 170px;
+	top: 100px;
 	width: 600px;
-	font-size: 50px;
 	background: #12cff3;
+	border-radius: 5px;
 }
 
 #inputTwo::placeholder {
@@ -126,10 +120,10 @@ button {
 }
 
 #inputTwo:focus, #inputTwo:hover {
-	box-shadow: 5px 12px 0px #fd9107;
+	border: 5px solid #fd9107;
 }
 
-#title {
+#titleModalDiv {
 	color: #fff;
 	position: relative;
 	top: 100px;
@@ -139,33 +133,60 @@ button {
 	font-size: 100px;
 }
 
-#title h3 {
+#googleFont {
 	color: #ab40f1;
 }
 
 #modalInstructions {
 	color: #fff;
 	position: relative;
-	top: 150px;
+	top: 100px;
 }
 
-#select, #return, .openWithLink, #resetColor, #plus, #minus {
+/*on screen buttons*/
+
+#icons {
+	visibility: hidden;
+	opacity: 0;
+	position: fixed;
+	height: 200px;
+	width: 50px;
+	z-index: 1;
+	left: 40px;
+	transition: opacity 0.3s;
+}
+
+.changeStyle, .selectReturn, #menu {
 	position: fixed;
 	color: #ab40f1;
 	background: #222;
 	border: 3px solid #ab40f1;
-	border-radius: 15px;
 	padding: 5px;
 	z-index: 1;
 	font-size: 17px;
 }
 
-.openWithLink, #resetColor, #plus, #minus {
+.changeStyle, #menu {
 	border-radius: 50%;
 	padding-left: 8px;
 	width: 40px;
 	padding-bottom: 3px;
 	transition: box-shadow 0.5s, left 0.5s;
+}
+
+#menu {
+	left: 40px;
+	padding-left: 9px;
+}
+
+#menu:hover + #icons {
+	visibility: visible;
+	opacity: 1;
+}
+
+#icons:hover {
+	visibility: visible;
+	opacity: 1;
 }
 
 #colorOne {
@@ -176,11 +197,6 @@ button {
  #colorTwo {
   left: 40px;
   top: 135px;
- }
-
- #resetColor {
- 	left: 40px;
- 	top: 270px;
  }
 
  #plus {
@@ -194,121 +210,127 @@ button {
 	top: 225px;
  }
 
+ #resetColor {
+ 	left: 40px;
+ 	top: 270px;
+ }
+
  #colorOne:hover {
  	left: 45px;
- 	box-shadow: -7px 0px 0px #f3f310;
+ 	box-shadow: -5px 0px 0px #f3f310;
  }
 
  #colorTwo:hover {
  	left: 45px;
- 	box-shadow: -7px 0px 0px #fd9107;
+ 	box-shadow: -5px 0px 0px #fd9107;
  }
 
 #resetColor:hover {
  	left: 45px;
- 	box-shadow: -7px 0px 0px #07fa37;
+ 	box-shadow: -5px 0px 0px #07fa37;
  }
 
- #plus:hover {
+#plus:hover {
  	left: 45px;
- 	box-shadow: -7px 0px 0px #12cff3;
+ 	box-shadow: -5px 0px 0px #12cff3;
  }
 
- #minus:hover {
+#minus:hover {
  	left: 45px;
- 	box-shadow: -7px 0px 0px #fc037b;
+ 	box-shadow: -5px 0px 0px #fc037b;
  }
 
- #select, #return {
+.selectReturn {
+ 	border-radius: 15px;
  	padding-left: 5px;
  	right: 20px;
  	top: 90px;
  	transition: box-shadow 0.5s, right 0.5s;
  }
 
- #select:hover, #return:hover {
+ .selectReturn:hover {
  	right: 15px;
- 	box-shadow: -10px 5px 0px #12cff3;
+ 	box-shadow: -7px 3px 0px #fc037b;
  }
 
- button, input {
+ button, input, #navSubmit {
  	outline: none;
  }
 
-@media only screen and (max-width: 992px) {
-	#select, #return, .openWithLink, #resetColor, #plus, #minus {
-		margin-top: 80px;
-	}
-	.navbar-default {
-		padding-left: 50px;
-	}
-	#first {
-		margin-top: 100px;
+/*media queries*/
+
+@media only screen and (max-width: 886px) {
+	#titleModalDiv {
+		top: 0px;
 	}
 }
 
-@media only screen and (max-width: 768px) {
-	#colorOne, #colorTwo, #resetColor, #plus, #minus {
-		left: 5px;
+@media only screen and (max-width: 786px) and (min-width: 768px) {
+	#input {
+		width: 150px;
 	}
-	#select, #return {
-		right: 5px;
-	}
-	#first {
-		margin-top: 120px;
-	}
-	.navbar-default {
-		padding-right: 50px;
+}
+
+@media only screen and (max-width: 667px) {
+	#inputTwo {
+		width: 90%;
+		font-size: 30px;
 	}
 }
 
 @media only screen and (max-width: 620px) {
-	.navbar-default {
-		padding-left: 20px;
-	}
-	#first {
-		margin-top: 140px;
-	}
-	#select, #return, .openWithLink, #resetColor, #plus, #minus {
-		margin-top: 100px;
-	}
-	#input {
-		width: 300px;
-	}
-	#title {
-		top: 0px;
-	}
-	#inputTwo {
+	#inputTwo, #modalInstructions {
 		top: 40px;
-		width: 300px;
-		font-size: 30px;
-	}
-	#myModal {
-		padding-top: 0px;
-		padding-left: 10px;
-	}
-	#modalInstructions {
-		top: 25px;
 	}
 }
 
-@media only screen and (max-width: 360px) {
-	#first {
-		margin-top: 160px;
-	}
-	#select, #return, .openWithLink, #resetColor, #plus, #minus {
-		margin-top: 140px;
-	}
-	#input {
-		width: 245px;
-	}
+@media only screen and (max-width: 443px) {
 	#inputTwo {
-		top: 0px;
-		width: 300px;
+		font-size: 25px;
 	}
-	#modalInstructions {
-		top: 0px;
+	.modal {
+		padding: 0px;
 	}
 }
+
+@media only screen and (max-width: 327px) {
+	#first {
+		margin-top: 30px;
+	}
+
+	#inputTwo, #modalInstructions {
+		top: 0px;
+	}
+
+	#googleFont {
+		margin-top: 0px;
+		margin-bottom: 20px;
+	}
+
+	#menu {
+		top: 110px;
+	}
+	
+	#colorOne {
+		top: 100px;
+	}
+
+ 	#colorTwo {
+  	top: 155px;
+ 	}
+
+ 	#plus {
+ 		top: 200px;
+ 	}
+
+ 	#minus {
+		top: 245px;
+  }
+
+ 	#resetColor {
+ 		top: 290px;
+  }
+}
+
 
 

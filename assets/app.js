@@ -4,9 +4,12 @@ var input = $("#input");
 var fontSize = 50;
 
 
+
 modal.css("display", "block");
 $("#return").hide();
-
+$("#select").hide();
+$("input").focus();
+request("alpha");
 
 
 $("input").keyup(function(){  
@@ -17,18 +20,34 @@ $("input").keyup(function(){
    }
 });
 
+$("#navSubmit").click(function() {
+	$("h2").html($("#input").val());
+})
 
-		for (var i = 0; i < fontList.items.length; i++) {
-		var fontLink = fontList.items[i].files.regular
-		var fontFamily = fontList.items[i].family
+
+
+$(".dropdown-menu a").click(function() {
+	request(this.dataset.value);
+});
+
+function request(sortWord) {
+$.ajax({
+	url: "https://www.googleapis.com/webfonts/v1/webfonts?sort=" + sortWord + "&key=AIzaSyDe2mtTrzmBtUsVpmDTImfKCwR-bSnV2Bc",
+	method: "GET"
+	}).done(function(response) {
+		$("#first").empty();
+		var userWord = $("input").val();
+		for (var i = 0; i < response.items.length; i++) {
+		var fontLink = response.items[i].files.regular
+		var fontFamily = response.items[i].family
 		$("head").prepend("<style type = text/css>" + "@font-face {" + "font-family:" + fontFamily + ";" + "src: url(" + fontLink + ");}" + "</style>");
-		$("<div class='col-lg-3 col-md-4 col-xs-6 fontBox'> <div class='thumbnail'><h2>font</h2><p>" + fontFamily + "</p></div></div>").appendTo($("#first")).css("font-family", fontFamily);
+		$("<div class='col-lg-3 col-md-4 col-xs-6 fontBox'> <div class='thumbnail'><h2>" + userWord + "</h2><p>" + fontFamily + "</p></div></div>").appendTo($("#first")).css("font-family", fontFamily);
 		}
+		fontClicks();
+	});
+}
 
-
-
-
-
+function fontClicks() {
 $("#lowercase").click(function() {
 	var text = $(".thumbnail");
 	text.css("text-transform", "none");
@@ -48,6 +67,7 @@ $("#mixedcase").click(function() {
 
 $(".fontBox").click(function() {
 	$(this).toggleClass("selected");
+	$("#select").fadeIn();
 })
 
 $("#select").click(function() {
@@ -61,7 +81,6 @@ $("#select").click(function() {
 $("#return").click(function() {	
 	$(".fontBox").fadeIn();
 	$("#return").fadeOut();
-	$("#select").fadeIn();
 });
 
 
@@ -118,5 +137,5 @@ $("#minus").click(function() {
 	text.css("font-size", fontSize + "px");
 });
 
-
+}
 }
