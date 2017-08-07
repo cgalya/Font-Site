@@ -5,56 +5,81 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>FONTS FONTS FONTS</title>
 	<link rel="shortcut icon" type="image/ico" href="assets/favicon.ico"/>
+	<link href="https://fonts.googleapis.com/css?family=Advent+Pro|Akronim|Aladin|Cabin" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/bootstrap.css">
 	<link rel="stylesheet" href="assets/spectrum.css" />
-	<link rel="stylesheet" href="assets/animate.css">
 	<link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-      <h1 id="navTitle"><span id="one">FONTS</span><span id="two"> FONTS </span><span id="three">FONTS</span></h1>
-      </div>
-      <div class="nav navbar-nav navbar-right">
-      <input id="input" type="text" value="">
-     	<button id="lowercase">aa</button> /
-     	<button id="mixedcase">Aa</button> /
-     	<button id="uppercase">AA</button>
-      	
-      </div>
-      
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><span id="one">FONTS</span><span id="two"> FONTS </span><span id="three">FONTS</span></a>
     </div>
-
-  </nav>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li id="sort" class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sort Fonts <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-value="alpha">Alphabetically</a></li>
+            <li><a href="#" data-value="date">Most Recent</a></li>
+            <li><a href="#" data-value="popularity">Popularity</a></li>
+            <li><a href="#" data-value="trending">Trending</a></li>
+          </ul>
+        </li>
+        <li><a id="lowercase" class="caseBtns" href="#">aa</a></li>
+        <li><a id="mixedcase" class="caseBtns" href="#">Aa</a></li>
+        <li ><a id="uppercase" class="caseBtns" href="#">AA</a></li> 
+        <li>
+		      <form class="navbar-form navbar-right">
+		        <div class="form-group">
+		          <input type="text" class="form-control" id="input" value="">        
+		        </div>
+		        <button id="navSubmit" type="submit" class="btn btn-default">Submit</button>
+		      </form>
+		    </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 	
 	<div class="container main">
+		<div id="menu"><span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span></div>
+		<div id="icons">
+			<div class='changeStyle openWithLink' id="colorOne" value=""><span class="glyphicon glyphicon-text-color" aria-hidden="true"></div>			
+			<div class='changeStyle openWithLink' id="colorTwo"><span class="glyphicon glyphicon-text-background" aria-hidden="true"></div>		
 		
-			<div class='openWithLink' id="colorOne" value=""><span class="glyphicon glyphicon-text-color" aria-hidden="true"></div>			
-			<div class='openWithLink' id="colorTwo"><span class="glyphicon glyphicon-text-background" aria-hidden="true"></div>		
+			<div class="changeStyle" id="plus"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></div>			
 		
-			<div id="plus"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></div>			
+			<div class="changeStyle" id="minus"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></div>
+			
+			<div class="changeStyle" id="resetColor"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></div>
+		</div>
+			<button class="selectReturn" id="select">View <br> Selected <br> Fonts</button>
+			
+			<button class="selectReturn" id="return">Return</button>
 		
-			<div id="minus"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></div>
-			
-			<div id="resetColor"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></div>
-			
-			<button id="select">View Selected Fonts</button>
-			
-			<button id="return">Return</button>
-			
 
-		<div id="first" class="row">
-    </div>
+		<div id="first" class="row"></div>
+
+
     <div id="myModal" class="modal">
-			<div id="title">
-				<h1 class="animated lightSpeedIn" id="modalTitle"><span id="one">FONTS</span><span id="two"> FONTS </span><span id="three">FONTS</span></h1>
-				<h3>wordmark.it for google fonts</h3>
+			<div id="titleModalDiv">
+				<h1 id="modalTitle"><span id="one">FONTS</span><span id="two"> FONTS </span><span id="three">FONTS</span></h1>
+				<h3 id="googleFont">wordmark.it for google fonts</h3>
+				<input id="inputTwo" type="text" value="" placeholder="enter a word or phrase">	
+				<h3 id="modalInstructions">to preview with over 800 fonts!</h3>
 			</div>
-			<input id="inputTwo" type="text" value="" placeholder="enter a word or phrase">	
-			<h3 id="modalInstructions">to preview with over 800 fonts!</h3>
+			
 		</div>
 	</div>
 	
@@ -66,8 +91,8 @@
   </footer>
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="assets/spectrum.js"></script>
-	<script type="text/javascript" src="assets/fonts.js"></script>
-	<script type="text/javascript" src="assets/javascript.js"></script>
+	<script type="text/javascript" src="assets/app.js"></script>
 </body>
 </html>
