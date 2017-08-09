@@ -4,7 +4,7 @@ var input = $("#input");
 var fontSize = 1.2;
 
 $('body').flowtype({
- minimum   : 500,
+ minimum   : 700,
  maximum   : 1200,
  minFont   : 12,
  maxFont   : 40,

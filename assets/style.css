@@ -143,14 +143,14 @@ input {
 
 #googleFont {
 	color: #d33eda;
-	font-size: 0.5em;
+	font-size: 0.7em;
 }
 
 #modalInstructions {
 	color: #fff;
 	position: relative;
 	top: 100px;
-	font-size: 0.5em;
+	font-size: 0.7em;
 }
 
 /*on screen buttons*/
@@ -194,7 +194,12 @@ input {
 	opacity: 1;
 }
 
-#icons:hover {
+#menu:active + #icons {
+	visibility: visible;
+	opacity: 1;
+}
+
+#icons:hover, #icons:active {
 	visibility: visible;
 	opacity: 1;
 }
@@ -272,7 +277,7 @@ input {
 
 @media only screen and (max-width: 886px) {
 	#titleModalDiv {
-		top: 0px;
+		top: 30px;
 	}
 }
 
@@ -289,12 +294,7 @@ input {
 }
 
 @media only screen and (max-width: 480px) {
-
-	#titleModalDiv {
-		top: 100px;
-	}
-
-		#menu {
+	#menu {
 		top: 65px;
 		left: 25px;
 	}
@@ -326,8 +326,9 @@ input {
   .selectReturn {
   	top: 65px;
   }
+  #sort, .caseBtns {
+  	font-size: 1.5em;
+  }
 }
-
-
 
 
