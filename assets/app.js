@@ -1,9 +1,15 @@
 window.onload = function() { 
 var modal = $("#myModal");
 var input = $("#input");
-var fontSize = 50;
+var fontSize = 1.2;
 
-
+$('body').flowtype({
+ minimum   : 500,
+ maximum   : 1200,
+ minFont   : 12,
+ maxFont   : 40,
+ fontRatio : 30
+});
 
 modal.css("display", "block");
 $("#return").hide();
@@ -119,22 +125,22 @@ $("#resetColor").click(function() {
 	text.css("color", "#000");
 	var text = $(".fontBox .thumbnail h2");
 	var textP = $(".fontBox p");
-	text.css("font-size", "50px");
-	textP.css("font-size", "15px");
+	text.css("font-size", "1.2em");
+	textP.css("font-size", "0.5em");
 });
 
 $("#plus").click(function() {
 	var text = $(".fontBox .thumbnail h2");
 	var textP = $(".fontBox p");
-	fontSize += 10;
-	text.css("font-size", fontSize + "px");
+	fontSize += 0.1;
+	text.css("font-size", fontSize + "em");
 });
 
 $("#minus").click(function() {
 	var text = $(".fontBox .thumbnail h2");
 	var textP = $(".fontBox p");
-	fontSize -= 10;
-	text.css("font-size", fontSize + "px");
+	fontSize -= 0.1;
+	text.css("font-size", fontSize + "em");
 });
 
 }
