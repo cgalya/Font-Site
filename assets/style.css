@@ -97,18 +97,10 @@ input {
 
 /*modal screen*/
 
-#modalNav{
-	background-color: #222;
-	border-bottom: none;
-}
-
 #myModal {
 	text-align: center;
 	width: 100%;
 	height: 100%;
-}
-
-.modal {
 	background-color: #222;
 	padding: 50px;
 }
@@ -156,14 +148,14 @@ input {
 /*on screen buttons*/
 
 #icons {
-	visibility: hidden;
-	opacity: 0;
+	/*visibility: hidden;
+	opacity: 0;*/
 	position: fixed;
 	height: 200px;
 	width: 50px;
 	z-index: 1;
 	left: 40px;
-	transition: opacity 0.3s;
+/*	transition: opacity 0.3s;*/
 }
 
 .changeStyle, .selectReturn, #menu {
@@ -189,7 +181,11 @@ input {
 	padding-left: 9px;
 }
 
-#menu:hover + #icons {
+.iconHide {
+	display: none;
+}
+
+/*#menu:hover + #icons {
 	visibility: visible;
 	opacity: 1;
 }
@@ -202,32 +198,33 @@ input {
 #icons:hover, #icons:active {
 	visibility: visible;
 	opacity: 1;
-}
+}*/
 
 #colorOne {
 	left: 40px;
 	padding-left: 9px;
+	top: 135px;
 }
 
  #colorTwo {
   left: 40px;
-  top: 135px;
+  top: 180px;
  }
 
  #plus {
  	left: 40px;
- 	top: 180px;
+ 	top: 225px;
 	padding-left: 9px;
  }
 
  #minus {
 	left: 40px;
-	top: 225px;
+	top: 270px;
  }
 
  #resetColor {
  	left: 40px;
- 	top: 270px;
+ 	top: 315px;
  }
 
  #colorOne:hover {
