@@ -28,8 +28,11 @@ $("input").keyup(function(){
 
 $("#navSubmit").click(function() {
 	$("h2").html($("#input").val());
-})
+});
 
+$("#menu").click(function() {
+	$(".changeStyle").toggleClass("iconHide");
+});
 
 
 $(".dropdown-menu a").click(function() {
@@ -47,7 +50,7 @@ $.ajax({
 		var fontLink = response.items[i].files.regular
 		var fontFamily = response.items[i].family
 		$("head").prepend("<style type = text/css>" + "@font-face {" + "font-family:" + fontFamily + ";" + "src: url(" + fontLink + ");}" + "</style>");
-		$("<div class='col-lg-3 col-md-4 col-xs-6 fontBox'> <div class='thumbnail'><h2>" + userWord + "</h2><p>" + fontFamily + "</p></div></div>").appendTo($("#first")).css("font-family", fontFamily);
+		$("<div class='col-lg-3 col-md-4 col-xs-6 fontBox'> <div class='thumbnail'><h2 class='userWord'>" + userWord + "</h2><p>" + fontFamily + "</p></div></div>").appendTo($("#first")).css("font-family", fontFamily);
 		}
 		fontClicks();
 	});
@@ -55,18 +58,18 @@ $.ajax({
 
 function fontClicks() {
 $("#lowercase").click(function() {
-	var text = $(".thumbnail");
+	var text = $(".userWord");
 	text.css("text-transform", "none");
 	text.html(text.html().toLowerCase());
 });
 
 $("#uppercase").click(function() {
-	var text = $(".thumbnail");
+	var text = $(".userWord");
 	text.html(text.html().toUpperCase());
 });
 
 $("#mixedcase").click(function() {
-	var text = $(".thumbnail");
+	var text = $(".userWord");
 	text.css("text-transform", "capitalize");
 	text.html(text.html().toLowerCase());
 });
